@@ -17,8 +17,8 @@ require('dotenv').config();
 const app = express();
 
 const bcryptSalt = bcrypt.genSaltSync(10);
-const jwtSecret = 'fasefraw4r5r3wq45wdfgw34twdfg';
-const bucket = 'dawid-booking-app';
+const jwtSecret = 'fwasefraw4r5r3wq45wdfgw34twdfg';
+const bucket = 'tourly-app';
 
 app.use(express.json());
 app.use(cookieParser());
