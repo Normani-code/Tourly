@@ -38,7 +38,7 @@ export default function RegisterPage() {
                  onChange={ev => setPassword(ev.target.value)} />
           <button className="primary">Registrar</button>
           <div className="text-center py-2 text-gray-500">
-           🌴Ya eres un Touly lover? <Link className="underline text-black" to={'/login'}>Iniciar Sesión</Link>
+           🌴Ya eres un Tourly lover? <Link className="underline text-black" to={'/login'}>Iniciar Sesión</Link>
           </div>
         </form>
       </div>
