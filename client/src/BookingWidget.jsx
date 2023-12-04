@@ -20,6 +20,9 @@ export default function BookingWidget({place}) {
   }, [user]);
 
   let numberOfNights = 0;
+  if (checkIn && checkOut) {
+    numberOfNights = differenceInCalendarDays(new Date(checkOut), new Date(checkIn));
+  }
 
   async function bookThisPlace() {
     const response = await axios.post('/bookings', {
@@ -30,7 +33,7 @@ export default function BookingWidget({place}) {
     const bookingId = response.data._id;
     setRedirect(`/account/bookings/${bookingId}`);
   }
-  
+
   if (redirect) {
     return <Navigate to={redirect} />
   }
