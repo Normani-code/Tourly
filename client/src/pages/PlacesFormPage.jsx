@@ -115,7 +115,7 @@ export default function PlacesFormPage() {
                    placeholder="15" />
           PM</div>
           <div>
-            <h3 className="mt-2 -mb-1">N° promedio de personas en el tour</h3>
+            <h3 className="mt-2 -mb-1">N° participantes en el tour</h3>
             <input type="number" value={maxGuests}
                    onChange={ev => setMaxGuests(ev.target.value)}/>
           </div>
