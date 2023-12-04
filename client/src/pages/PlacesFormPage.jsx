@@ -101,21 +101,21 @@ export default function PlacesFormPage() {
         {preInput('Horarios de comienzo y finalización','agregue el horario el cual se realizara el tour')}
         <div className="grid gap-2 grid-cols-2 md:grid-cols-4">
           <div>
-            <h3 className="mt-2 -mb-1">Comienzo</h3>
+            <h3 className="mt-2 -mb-1">Apertura</h3>
             <input type="text"
-                   value={checkIn}
+                   value={checkIn} 
                    onChange={ev => setCheckIn(ev.target.value)}
-                   placeholder="9:00"/>
-          </div>
+                   placeholder="9"/>
+          AM</div>
           <div>
             <h3 className="mt-2 -mb-1">Salida</h3>
             <input type="text"
                    value={checkOut}
                    onChange={ev => setCheckOut(ev.target.value)}
-                   placeholder="15:00" />
-          </div>
+                   placeholder="15" />
+          PM</div>
           <div>
-            <h3 className="mt-2 -mb-1">N° máximo de invitados</h3>
+            <h3 className="mt-2 -mb-1">N° promedio de personas en el tour</h3>
             <input type="number" value={maxGuests}
                    onChange={ev => setMaxGuests(ev.target.value)}/>
           </div>
