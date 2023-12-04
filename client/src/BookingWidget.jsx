@@ -52,7 +52,7 @@ export default function BookingWidget({place}) {
         </div>
       </div>
       <button onClick={bookThisPlace} className="primary mt-4">
-        Contactame 📞
+        Contactame 📳
         {numberOfGuests > 0 && (
           <span> ${numberOfGuests * place.price}</span>
         )}
