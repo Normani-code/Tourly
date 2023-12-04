@@ -8,8 +8,6 @@ export default function BookingWidget({place}) {
   const [checkIn,setCheckIn] = useState('');
   const [checkOut,setCheckOut] = useState('');
   const [numberOfGuests,setNumberOfGuests] = useState(1);
-  const [name,setName] = useState('');
-  const [phone,setPhone] = useState('');
   const [redirect,setRedirect] = useState('');
   const {user} = useContext(UserContext);
 
