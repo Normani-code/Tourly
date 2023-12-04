@@ -29,12 +29,12 @@ export default function PlacePage() {
       <div className="mt-8 mb-8 grid gap-8 grid-cols-1 md:grid-cols-[2fr_1fr]">
         <div>
           <div className="my-4">
-            <h2 className="font-semibold text-2xl">descripción</h2>
+            <h2 className="font-semibold text-2xl">Descripción</h2>
             {place.description}
           </div>
           Comienzo: {place.checkIn}<br />
           Salida: {place.checkOut}<br />
-          Número máximo de invitados: {place.maxGuests}
+          Número promedio personas en el tour: {place.maxGuests}
         </div>
         <div>
           <BookingWidget place={place} />
