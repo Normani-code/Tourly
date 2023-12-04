@@ -88,6 +88,7 @@ export default function PlacesFormPage() {
         <input type="text" value={title} onChange={ev => setTitle(ev.target.value)} placeholder="Titulo, por ejemplo: perdidos en la naturaleza"/>
         {preInput('Ubicación', 'Agrega la dirección de google maps del tour 🗺️')}
         <input type="text" value={address} onChange={ev => setAddress(ev.target.value)}placeholder="Ubicación"/>
+        {preInput('Fotos','Entre mas = Mejor 📈')}
         <PhotosUploader addedPhotos={addedPhotos} onChange={setAddedPhotos} />
         {preInput('Descripción','descripción del tour y numero de contacto 📑')}
         <textarea value={description} onChange={ev => setDescription(ev.target.value)} />
