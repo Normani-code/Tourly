@@ -32,8 +32,7 @@ export default function PlacePage() {
             <h2 className="font-semibold text-2xl">Descripción</h2>
             {place.description}
           </div>
-          Comienzo: {place.checkIn}<br />
-          Salida: {place.checkOut}<br />
+          Comienzo: {place.checkIn}<br /> Salida: {place.checkOut}<br />
           Número promedio personas en el tour: {place.maxGuests}
         </div>
         <div>
