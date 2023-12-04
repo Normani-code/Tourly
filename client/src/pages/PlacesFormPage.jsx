@@ -91,7 +91,7 @@ export default function PlacesFormPage() {
         {preInput('Ubicación', 'Agrega la dirección de google maps del tour 🗺️')}
         <input type="text" value={address} onChange={ev => setAddress(ev.target.value)}placeholder="Ubicación"/>
         {preInput('Contacto', 'Agrega el link de whatsapp para este servicio 📞')}
-        <input type="text" value={contact} onChange={ev => setAddress(ev.target.value)}placeholder="Contacto"/>
+        <input type="text" value={contact} onChange={ev => setContact(ev.target.value)}placeholder="Contacto"/>
         {preInput('Fotos','Entre mas = Mejor 📈')}
         <PhotosUploader addedPhotos={addedPhotos} onChange={setAddedPhotos} />
         {preInput('Descripción','descripción del tour 📑')}
