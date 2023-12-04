@@ -104,7 +104,7 @@ export default function PlacesFormPage() {
             <h3 className="mt-2 -mb-1">Comienzo</h3>
             <input type="time"
                    value={checkIn}
-                   onChange={ev => setCheckIn(ev.target.value)}
+                   onChange={ev => setCheckIn(ev.target.getTime())}
                    placeholder="9:00"/>
           </div>
           <div>
@@ -117,7 +117,7 @@ export default function PlacesFormPage() {
           <div>
             <h3 className="mt-2 -mb-1">N° máximo de invitados</h3>
             <input type="number" value={maxGuests}
-                   onChange={ev => setMaxGuests(ev.target.getTime())}/>
+                   onChange={ev => setMaxGuests(ev.target.value)}/>
           </div>
           <div>
             <h3 className="mt-2 -mb-1"> Precio$</h3>
