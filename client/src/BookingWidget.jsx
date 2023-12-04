@@ -41,7 +41,7 @@ export default function BookingWidget({place}) {
   return (
     <div className="bg-white shadow p-4 rounded-2xl">
       <div className="text-2xl text-center">
-        Price: ${place.price} / por persona
+        Precio: ${place.price} / por persona
       </div>
       <div className="border rounded-2xl mt-4">
         <div className="py-3 px-4 border-t">
