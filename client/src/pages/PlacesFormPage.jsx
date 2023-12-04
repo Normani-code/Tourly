@@ -9,7 +9,6 @@ export default function PlacesFormPage() {
   const {id} = useParams();
   const [title,setTitle] = useState('');
   const [address,setAddress] = useState('');
-  const [contact,setContact] = useState('');
   const [addedPhotos,setAddedPhotos] = useState([]);
   const [description,setDescription] = useState('');
   const [perks,setPerks] = useState([]);
@@ -27,7 +26,6 @@ export default function PlacesFormPage() {
        const {data} = response;
        setTitle(data.title);
        setAddress(data.address);
-       setContact(data.contact);
        setAddedPhotos(data.photos);
        setDescription(data.description);
        setPerks(data.perks);
@@ -60,7 +58,7 @@ export default function PlacesFormPage() {
   async function savePlace(ev) {
     ev.preventDefault();
     const placeData = {
-      title, address, contact, addedPhotos,
+      title, address, addedPhotos,
       description, perks, extraInfo,
       checkIn, checkOut, maxGuests, price,
     };
@@ -90,11 +88,8 @@ export default function PlacesFormPage() {
         <input type="text" value={title} onChange={ev => setTitle(ev.target.value)} placeholder="Titulo, por ejemplo: perdidos en la naturaleza"/>
         {preInput('Ubicación', 'Agrega la dirección de google maps del tour 🗺️')}
         <input type="text" value={address} onChange={ev => setAddress(ev.target.value)}placeholder="Ubicación"/>
-        {preInput('Contacto', 'Agrega el link de whatsapp para este servicio 📞')}
-        <input type="text" value={contact} onChange={ev => setContact(ev.target.value)}placeholder="Contacto"/>
-        {preInput('Fotos','Entre mas = Mejor 📈')}
         <PhotosUploader addedPhotos={addedPhotos} onChange={setAddedPhotos} />
-        {preInput('Descripción','descripción del tour 📑')}
+        {preInput('Descripción','descripción del tour y numero de contacto 📑')}
         <textarea value={description} onChange={ev => setDescription(ev.target.value)} />
         {preInput('Beneficios','selecciona todas las ventajas de tu tour 🥳')}
         <div className="grid mt-2 gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
