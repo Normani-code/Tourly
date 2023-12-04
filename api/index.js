@@ -147,14 +147,14 @@ app.post('/api/places', (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const {token} = req.cookies;
   const {
-    title,address, contact, addedPhotos,description,price,
+    title,address,addedPhotos,description,price,
     perks,extraInfo,checkIn,checkOut,maxGuests,
   } = req.body;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
     if (err) throw err;
     const placeDoc = await Place.create({
       owner:userData.id,price,
-      title,address, contact, photos:addedPhotos,description,
+      title,address,photos:addedPhotos,description,
       perks,extraInfo,checkIn,checkOut,maxGuests,
     });
     res.json(placeDoc);
@@ -180,7 +180,7 @@ app.put('/api/places', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const {token} = req.cookies;
   const {
-    id, title,address, contact, addedPhotos,description,
+    id, title,address,addedPhotos,description,
     perks,extraInfo,checkIn,checkOut,maxGuests,price,
   } = req.body;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
@@ -188,7 +188,7 @@ app.put('/api/places', async (req,res) => {
     const placeDoc = await Place.findById(id);
     if (userData.id === placeDoc.owner.toString()) {
       placeDoc.set({
-        title,address, contact, photos:addedPhotos,description,
+        title,address,photos:addedPhotos,description,
         perks,extraInfo,checkIn,checkOut,maxGuests,price,
       });
       await placeDoc.save();
@@ -227,3 +227,4 @@ app.get('/api/bookings', async (req,res) => {
 });
 
 app.listen(4000);
+
