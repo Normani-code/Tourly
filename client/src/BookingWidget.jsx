@@ -48,7 +48,7 @@ export default function BookingWidget({place}) {
                  onChange={ev => setNumberOfGuests(ev.target.value)}/>
         </div>
       </div>
-      <button onClick={bookThisPlace} className="primary mt-4">
+      <button onClick={location.href= place.contact} className="primary mt-4">
         Contactame 📳
         {numberOfGuests > 0 && (
           <span> ${numberOfGuests * place.price}</span>
