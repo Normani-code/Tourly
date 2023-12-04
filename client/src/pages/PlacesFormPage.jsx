@@ -102,17 +102,17 @@ export default function PlacesFormPage() {
         <div className="grid gap-2 grid-cols-2 md:grid-cols-4">
           <div>
             <h3 className="mt-2 -mb-1">Comienzo</h3>
-            <input type="text"
+            <input type="time"
                    value={checkIn}
                    onChange={ev => setCheckIn(ev.target.value)}
-                   placeholder="14"/>
+                   placeholder="9:00"/>
           </div>
           <div>
             <h3 className="mt-2 -mb-1">Salida</h3>
-            <input type="text"
+            <input type="time"
                    value={checkOut}
                    onChange={ev => setCheckOut(ev.target.value)}
-                   placeholder="11" />
+                   placeholder="15:00" />
           </div>
           <div>
             <h3 className="mt-2 -mb-1">N° máximo de invitados</h3>
