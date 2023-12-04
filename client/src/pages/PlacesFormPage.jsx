@@ -105,15 +105,15 @@ export default function PlacesFormPage() {
             <input type="text"
                    value={checkIn} 
                    onChange={ev => setCheckIn(ev.target.value)}
-                   placeholder="9"/>
-          AM</div>
+                   placeholder="9"/> Horas
+          </div>
           <div>
             <h3 className="mt-2 -mb-1">Salida</h3>
             <input type="text"
                    value={checkOut}
                    onChange={ev => setCheckOut(ev.target.value)}
-                   placeholder="15" />
-          PM</div>
+                   placeholder="15" /> Horas
+          </div>
           <div>
             <h3 className="mt-2 -mb-1">N° participantes en el tour</h3>
             <input type="number" value={maxGuests}
