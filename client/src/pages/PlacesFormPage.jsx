@@ -104,14 +104,14 @@ export default function PlacesFormPage() {
             <h3 className="mt-2 -mb-1">Comienzo</h3>
             <input type="time"
                    value={checkIn}
-                   onChange={ev => setCheckIn(ev.target.getTime())}
+                   onChange={ev => setCheckIn(ev.target.value)}
                    placeholder="9:00"/>
           </div>
           <div>
             <h3 className="mt-2 -mb-1">Salida</h3>
             <input type="time"
                    value={checkOut}
-                   onChange={ev => setCheckOut(ev.target.getTime())}
+                   onChange={ev => setCheckOut(ev.target.value)}
                    placeholder="15:00" />
           </div>
           <div>
