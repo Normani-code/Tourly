@@ -51,12 +51,11 @@ export default function BookingWidget({place}) {
                  onChange={ev => setNumberOfGuests(ev.target.value)}/>
         </div>
       </div>
-      <button onClick={bookThisPlace} className="primary mt-4">
-        Contactame 📳
-        {numberOfGuests > 0 && (
-          <span> ${numberOfGuests * place.price}</span>
-        )}
-      </button>
+        <div className="primary mt-4 flex gap-2 border border-gray-300 rounded-full py-2 px-4 shadow-md shadow-gray-300">
+            {numberOfGuests > 0 && (
+              <span> ${numberOfGuests * place.price}</span>
+            )}
+        </div>
     </div>
   );
 }
