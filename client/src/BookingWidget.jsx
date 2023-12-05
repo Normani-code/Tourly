@@ -18,7 +18,6 @@ export default function BookingWidget({place}) {
       setName(user.name);
     }
   }, [user]);
-
   let numberOfNights = 0;
   if (checkIn && checkOut) {
     numberOfNights = differenceInCalendarDays(new Date(checkOut), new Date(checkIn));
